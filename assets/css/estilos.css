@@ -1,0 +1,146 @@
+body {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  gap: 16px;
+}
+
+header {
+  background-color: ghostwhite;
+  box-shadow: 2px 2px 4px 0 rgba(0,0,0,.1);
+  grid-area: header;
+  width: 100vw;
+}
+
+.menu {
+  clear: both;
+  max-height: 0;
+  transition: .2s ease-out;
+  overflow: hidden;
+}
+
+.logo {
+  
+}
+
+.link {
+  display: flex;
+  padding: 1rem 1.2rem;
+  color: darkslategrey;
+  text-decoration: none;
+  position: relative;
+  align-items: center;
+  font-size: 2.2rem;
+}
+
+
+.link:before {
+  background-color: #d41017;
+  content: "";
+  height: 4px;
+  width: 2rem;
+  margin-right: 10px;
+  transition: .2s ease-out;
+  text-decoration: none;
+}
+
+.link:hover:before {
+  width: 4rem;
+  transition: .2s ease-out;
+}
+
+.menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  padding: 60px 40px;
+  position: relative;
+  user-select: none;
+}
+
+.menu-icon .navicon {
+  background: #333;
+  display: block;
+  height: 0.5rem;
+  position: relative;
+  transition: background .2s ease-out;
+  width: 3.5em;
+  border-radius: 20px;
+}
+
+.menu-icon .navicon:before,
+.menu-icon .navicon:after {
+  background: #333;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+  border-radius: 20px;
+}
+
+.menu-icon .navicon:before {
+  top: 15px;
+}
+
+.menu-icon .navicon:after {
+  top: -15px;
+}
+
+.menu-btn {
+  display: none;
+}
+
+.menu-btn:checked ~ .menu {
+  max-height: 100vh;
+  transition: .3s ease-in-out;
+}
+
+.menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+
+.menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+.menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+.menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+
+main{
+  grid-area: main;
+}
+
+.title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 3.2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 16px;
+}
+
+.title-complement {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.4rem;
+  color: #888;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.title-complement:before {
+  background-color: #d41017;
+  content: "";
+  height: 4px;
+  width: 80px;
+  margin: 16px auto 16px auto;
+}
