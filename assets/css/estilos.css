@@ -198,7 +198,7 @@ main{
     "p1 p2"
     "desenvolvimento desenvolvimento"
     "p3 p3";
-  align-items: center;
+  align-items: top;
   column-gap: 18px;
   padding-bottom: 32px;
 }
