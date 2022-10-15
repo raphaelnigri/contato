@@ -5,6 +5,8 @@ body {
     "main"
     "footer";
   gap: 16px;
+  width: 100vw;
+  overflow-x: hidden;
 }
 
 header {
@@ -129,8 +131,9 @@ header {
     border-right: 4px solid #f4f4f4;
   }
 
-  .link:hover {
+  .link:hover , .link:focus{
     background-color: #f4f4f4;
+    outline: none;
   }
 
   .menu-icon {
@@ -287,6 +290,7 @@ main{
   gap: 24px;
   width: 85vw;
   margin: 64px auto 0px auto;
+  overflow: none;
 }
 
 .input__contato{
@@ -295,6 +299,7 @@ main{
   padding: 0.8em;
   width: 100%;
   outline: none;
+  font-size: 1.2em;
 }
 
 .input__label{
@@ -309,29 +314,44 @@ main{
   margin-left: 16px;
 }
 
+textarea{
+  resize: none;
+}
+
 .input--mensagem{
   height: 280px;
 }
 
 .label--mensagem{
-  margin-top: -18px;
+  margin-top: -19px;
 }
 
 .label--nome{
-  margin-top: 316px;
+  margin-top: 320px;
 }
 
 .label--email{
-  margin-top: 388px;
+  margin-top: 400.5px;
 }
 
 .label--site{
-  margin-top: 459px;
+  margin-top: 481px;
 }
 
 .input--enviar{
   width: auto;
-  padding: 1em 2em;
+  padding: 1rem 3rem;
+  cursor: pointer;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+  text-transform: uppercase;
+  background-color: whitesmoke;
+}
+
+.input--enviar:focus , .input--enviar:hover{
+  background-color: #888;
+  transition: 0.3s ;
+
 }
 
 @media screen and (min-width: 1024px) {
@@ -339,4 +359,72 @@ main{
   .input__container{
     width: 60vw;
   }
+}
+
+footer {
+  grid-area: footer;
+  margin-top: 32px;
+  background-color: whitesmoke;
+  border-top: 2px outset;
+}
+
+.menu__footer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 280px;
+  margin: 16px auto 0px auto;
+}
+
+.menu__footer__item {
+  font-size: 2em;
+  cursor: pointer;
+  color: whitesmoke;
+  padding: 11.5px;
+}
+
+.menu__footer__item--insta:hover {
+  color: blueviolet;
+}
+
+.menu__footer__item--face:hover {
+  color: dodgerblue;
+}
+
+.menu__footer__item--twit:hover {
+  color: skyblue;
+}
+
+.menu__footer__circle{
+  background-color: #888;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.menu__footer__circle:hover{
+  background-color: black;
+  transition: 0.5s;
+}
+
+.copyright__container{
+  margin-top: 16px;
+  background-color: #888;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0.4em;
+}
+
+.copyright{
+  color: white;
+}
+
+.copyright i{
+  margin-right: 8px;
 }
