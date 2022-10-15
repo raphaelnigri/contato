@@ -304,38 +304,18 @@ main{
 
 .input__label{
   align-self: flex-start;
-  position: absolute;
   color: #d41017;
   font-family: 'Playfair Display', serif;
   font-weight: 700;
   background-color: white;
   padding: 0px 0.5em 0px 0.5em;
   font-size: 1.8rem;
-  margin-left: 16px;
+  margin: 0px 0px -32px 16px;
+  z-index: 4;
 }
 
 textarea{
   resize: none;
-}
-
-.input--mensagem{
-  height: 280px;
-}
-
-.label--mensagem{
-  margin-top: -19px;
-}
-
-.label--nome{
-  margin-top: 320px;
-}
-
-.label--email{
-  margin-top: 400.5px;
-}
-
-.label--site{
-  margin-top: 481px;
 }
 
 .input--enviar{
