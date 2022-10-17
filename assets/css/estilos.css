@@ -4,7 +4,6 @@ body {
     "header"
     "main"
     "footer";
-  gap: 16px;
   width: 100vw;
   overflow-x: hidden;
 }
@@ -151,7 +150,7 @@ main{
 }
 
 .section {
-  margin-top: calc(64px - 16px);
+  padding-top: calc(64px - 16px);
 }
 
 .title {
@@ -217,7 +216,7 @@ main{
 
 .subtitle__fazemos{
   font-family: 'Playfair Display', serif;
-  font-size: 2.8rem;
+  font-size: 2.6rem;
   display: flex;
   flex-direction: column-reverse;
   align-items: center;
@@ -261,6 +260,7 @@ main{
   text-align: center;
   font-size: 1.2rem;
   margin: 0px 12px 0px 12px;
+  padding: 0px 10px 0px 10px;
 }
 
 @media screen and (min-width: 1440px) {
@@ -283,14 +283,17 @@ main{
   }
 }
 
-.input__container{
+.section__mensagem{
+  padding-bottom: 32px;
+}
+
+.form__container{
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 24px;
   width: 85vw;
   margin: 64px auto 0px auto;
-  overflow: none;
 }
 
 .input__contato{
@@ -300,6 +303,7 @@ main{
   width: 100%;
   outline: none;
   font-size: 1.2em;
+  background-color: white;
 }
 
 .input__label{
@@ -307,15 +311,74 @@ main{
   color: #d41017;
   font-family: 'Playfair Display', serif;
   font-weight: 700;
-  background-color: white;
-  padding: 0px 0.5em 0px 0.5em;
   font-size: 1.8rem;
+}
+
+.label--box{
+  background-color: white;
   margin: 0px 0px -32px 16px;
+  padding: 0px 0.5em 0px 0.5em;
   z-index: 4;
 }
 
 textarea{
   resize: none;
+}
+
+.contato__container{
+  align-self: flex-start;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 100%;
+  gap: 16px;
+}
+
+.label--preferencia{
+  grid-column: span 3;
+  margin-left: -0.6em;
+}
+
+.label--radio{
+  color: #666;
+  cursor: pointer;
+  justify-self: center;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+
+/*hide input radiobox*/
+.input__radio{
+  width: 0px;
+  height: 0px;
+}
+
+.radiobox{
+  margin-top: 2px;
+  height: 0.8em;
+  width: 0.8em;
+  border-radius: 8px;
+  background-color: #ccc;
+  transition: 0.2s;
+}
+
+.label--radio:hover input ~ .radiobox {
+  background-color: #666;
+}
+
+.label--radio input:checked ~ .radiobox {
+  background-color: #666;
+}
+
+.label--radio input:checked ~ .radiobox:after {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #d41017;
+  margin-top: 7px;
+  margin-left: 7px;
 }
 
 .input--enviar{
@@ -331,21 +394,54 @@ textarea{
 .input--enviar:focus , .input--enviar:hover{
   background-color: #888;
   transition: 0.3s ;
+}
 
+.tel{
+  width: 100%;
+  margin-left: -32px;
 }
 
 @media screen and (min-width: 1024px) {
 
-  .input__container{
+  .section__mensagem{
+    background: url(../img/contact.png) no-repeat;
+    background-size: 125% 100%;
+    width: 100vw;
+  }
+
+  .cartao{
+    background-color: whitesmoke;
+    opacity: 0.95;
+    width: 75%;
+    border-radius: 50px;
+    margin-inline: auto;
+    padding: 2rem;
+    box-shadow: 0px 0px 4px 4px rgba(0,0,0,0.3);
+  }
+
+  .input__contato{
+    background-color: whitesmoke;
+    opacity: 0.95;
+  }
+
+  .label--box{
+    background-color: whitesmoke;
+  }
+
+  .form__container{
     width: 60vw;
   }
+
+  .input--enviar{
+    box-shadow: 0px 0px 4px 2px rgba(0,0,0,0.3);
+  }
+
 }
 
 footer {
   grid-area: footer;
-  margin-top: 32px;
   background-color: whitesmoke;
-  border-top: 2px outset;
+  box-shadow: 0px 0px 4px 2px rgba(0,0,0,0.3);
 }
 
 .menu__footer{
@@ -407,4 +503,8 @@ footer {
 
 .copyright i{
   margin-right: 8px;
+}
+
+.off{
+  display: none;
 }
