@@ -180,6 +180,7 @@ main{
 .fazemos__container {
   display: grid;
   margin-top: 64px;
+  box-shadow: 0px 0px 4px 4px rgba(0,0,0,0.3);
 }
 
 .imagem {
@@ -285,6 +286,7 @@ main{
 
 .section__mensagem{
   padding-bottom: 32px;
+  box-shadow: inset 0px -8px 6px -6px rgba(0,0,0,0.2)
 }
 
 .form__container{
@@ -407,6 +409,7 @@ textarea{
     background: url(../img/contact.png) no-repeat;
     background-size: 125% 100%;
     width: 100vw;
+    box-shadow: inset 0px 8px 4px -4px rgba(0,0,0,0.3) , inset 0px -8px 4px -4px rgba(0,0,0,0.3);
   }
 
   .cartao{
