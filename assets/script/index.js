@@ -20,7 +20,7 @@ function mailOff(){
 	}
 }
 
-function tellON (){
+function telON (){
 	if (tel[0].classList.contains('off')) {
 		for(let i of tel) {  
 			i.classList.remove('off');
@@ -28,7 +28,7 @@ function tellON (){
 		tel[1].required = true;
 	}
 }
-function tellOff(){
+function telOff(){
 	if (!tel[0].classList.contains('off')) {
 		for(let i of tel) {  
 			i.classList.add('off');
@@ -58,17 +58,17 @@ for (let i of input){
 	i.addEventListener('change', () => {
 		if (input[0].checked){
 			mailON();
-			tellOff();
+			telOff();
 			whatsOff();
 		}
 		if (input[1].checked){
 			mailOff();
-			tellON();
+			telON();
 			whatsOff();
 		}
 		if (input[2].checked){
 			mailOff();
-			tellOff();
+			telOff();
 			whatsON();
 		}
 	})
