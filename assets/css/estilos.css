@@ -22,10 +22,6 @@ header {
   overflow: hidden;
 }
 
-.logo {
-  
-}
-
 .link {
   display: flex;
   padding: 1rem 1.2rem;
@@ -35,7 +31,6 @@ header {
   align-items: center;
   font-size: 2.2rem;
 }
-
 
 .link:before {
   background-color: #d41017;
@@ -54,7 +49,6 @@ header {
 
 .menu-icon {
   cursor: pointer;
-  display: inline-block;
   float: right;
   padding: 60px 40px;
   position: relative;
@@ -327,7 +321,7 @@ textarea{
   resize: none;
 }
 
-.contato__container{
+.fieldset__contato{
   align-self: flex-start;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
