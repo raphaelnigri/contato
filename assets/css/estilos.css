@@ -329,7 +329,7 @@ textarea{
   gap: 16px;
 }
 
-.label--preferencia{
+.label--title{
   grid-column: span 3;
   margin-left: -0.6em;
 }

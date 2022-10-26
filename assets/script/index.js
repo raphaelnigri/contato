@@ -1,3 +1,5 @@
+/*Radio input menu*/
+
 const mail = document.querySelectorAll('.email')
 const tel = document.querySelectorAll('.telefone')
 const whats = document.querySelectorAll('.whatsapp')
@@ -73,3 +75,6 @@ for (let i of input){
 		}
 	})
 }
+
+/*Custom error messages*/
+
