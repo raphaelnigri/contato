@@ -64,7 +64,6 @@ function valida(input){
         input.parentElement.classList.add('erro');
         input.parentElement.querySelector('.erro__alert').innerHTML = mostraAlerta(inputType , input);
     }
-
 }
 
 inputs.forEach(input =>{
@@ -118,16 +117,15 @@ function validaCPF_CNPJ(input){
 
     if(tamanho == 11){ /*é CPF*/
         if(!checaNumeroRepetido(numeroFormatado) || !checaEstruturaCPF(numeroFormatado)) {
-            mensagem = 'O CPF digitado não é válido.'
+            mensagem = 'O CPF digitado não é válido.';
         }
     }
 
     if(tamanho == 14){ /*é CNPJ*/
         if(!checaNumeroRepetido(numeroFormatado) || !checaEstruturaCNPJ(numeroFormatado)) {
-            mensagem = 'O CNPJ digitado não é válido.'
+            mensagem = 'O CNPJ digitado não é válido.';
         }
     }
-
     input.setCustomValidity(mensagem);
 }
 
