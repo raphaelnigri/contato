@@ -75,6 +75,3 @@ for (let i of input){
 		}
 	})
 }
-
-/*Custom error messages*/
-

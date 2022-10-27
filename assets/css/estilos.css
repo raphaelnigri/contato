@@ -292,14 +292,8 @@ main{
   margin: 64px auto 0px auto;
 }
 
-.input__contato{
-  border-radius: 10px;
-  border: 2px solid #888;
-  padding: 0.8em;
-  width: 100%;
-  outline: none;
-  font-size: 1.2em;
-  background-color: white;
+.input__wrapper{
+  display: contents;
 }
 
 .input__label{
@@ -317,6 +311,16 @@ main{
   z-index: 4;
 }
 
+.input__contato{
+  border-radius: 10px;
+  border: 2px solid #888;
+  padding: 0.8em;
+  width: 100%;
+  outline: none;
+  font-size: 1.2em;
+  background-color: white;
+}
+
 textarea{
   resize: none;
 }
@@ -331,7 +335,6 @@ textarea{
 
 .label--title{
   grid-column: span 3;
-  margin-left: -0.6em;
 }
 
 .label--radio{

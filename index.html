@@ -52,17 +52,27 @@
 					<h2 class="title">Envie uma mensagem.</h2>
 					<p class="title-complement">Vamos conversar sobre o seu projeto!</p>
 					<form class="form__container">
-						<label class="input__label label--box" for="mensagem">Mensagem</label>
-						<textarea class="input__contato" rows="12" id="mensagem" maxlength = "800"  placeholder="Insira sua mensagem..." required></textarea>
-						
-						<label class="input__label label--box" for="nome">Nome</label>
-						<input class="input__contato" id="nome" type="text" maxlength = "80"  placeholder="Insira seu nome..." required>
 
-						<label class="input__label label--box" for="cpf">CPF / CNPJ</label>
-						<input class="input__contato" id="cpf" type="text" pattern="^(\d{2}\.?\d{3}\.?\d{3}\/?\d{4}-?\d{2}|\d{3}\.?\d{3}\.?\d{3}-?\d{2})$"  placeholder="Insira seu CPF ou CNPJ..." required>
-
-						<label class="input__label label--box" for="site">Website (Opcional)</label>
-						<input class="input__contato" id="site" type="text" maxlength = "80" placeholder="O que já é bom ainda pode melhorar...">
+						<div class="input__wrapper">
+							<label class="input__label label--box" for="mensagem">Mensagem</label>
+							<textarea class="input__contato" data-tipo="mensagem" rows="12" id="mensagem" maxlength = "800"  placeholder="Insira sua mensagem..." required></textarea>
+							<span class="erro__alert">Esse campo não está válido.</span>
+						</div>
+						<div class="input__wrapper">
+							<label class="input__label label--box" for="nome">Nome</label>
+							<input class="input__contato" data-tipo="nome" id="nome" type="text" maxlength = "80"  placeholder="Insira seu nome..." required>
+							<span class="erro__alert">Esse campo não está válido.</span>
+						</div>
+						<div class="input__wrapper">
+							<label class="input__label label--box" for="cpf">CPF / CNPJ</label>
+							<input class="input__contato" data-tipo="cpf" id="cpf" type="text" pattern="^(\d{2}\.?\d{3}\.?\d{3}\/?\d{4}-?\d{2}|\d{3}\.?\d{3}\.?\d{3}-?\d{2})$"  placeholder="Insira seu CPF ou CNPJ..." required>
+							<span class="erro__alert">Esse campo não está válido.</span>
+						</div>
+						<div class="input__wrapper">
+							<label class="input__label label--box" for="site">Website (Opcional)</label>
+							<input class="input__contato" data-tipo="site" id="site" type="url" maxlength = "80" placeholder="O que já é bom ainda pode melhorar...">
+							<span class="erro__alert">Esse campo não está válido.</span>
+						</div>
 
 						<fieldset class="fieldset__contato">
 							<p class="input__label label--title">Como prefere o nosso contato?</p>
@@ -80,15 +90,21 @@
 							</label>
 						</fieldset>
 
-						<label class="input__label label--box telefone off" for="telefone">Telefone ou Celular</label>
-						<input class="input__contato telefone off" id="telefone" type="tel" pattern="^\(?0?\d{2}\)?\s*\d{5}[-\s]?\d{4}$|^\(?0?\d{2}\)?\s*\d{4}[-\s]?\d{4}$" placeholder="(DDD) xxxx-xxxx">
-
-						<label class="input__label label--box whatsapp off" for="whatsapp">Whatsapp</label>
-						<input class="input__contato whatsapp off" id="whatsapp" type="tel" pattern="^\(?0?\d{2}\)?\s*\d{5}[-\s]?\d{4}$|^\(?0?\d{2}\)?\s*\d{4}[-\s]?\d{4}$" placeholder="(DDD) xxxx-xxxxx">
-						
-						<label class="input__label label--box email" for="email">Email</label>
-						<input class="input__contato email" id="email" type="email" maxlength = "80" required placeholder="username@provedor.com">
-
+						<div class="input__wrapper">
+							<label class="input__label label--box telefone off" for="telefone">Telefone ou Celular</label>
+							<input class="input__contato telefone off" data-tipo="telefone" id="telefone" type="tel" pattern="^\(?0?\d{2}\)?\s*\d{5}[-\s]?\d{4}$|^\(?0?\d{2}\)?\s*\d{4}[-\s]?\d{4}$" placeholder="(DDD) xxxx-xxxx">
+							<span class="erro__alert">Esse campo não está válido.</span>
+						</div>
+						<div class="input__wrapper">
+							<label class="input__label label--box whatsapp off" for="whatsapp">Whatsapp</label>
+							<input class="input__contato whatsapp off" data-tipo="whatsapp" id="whatsapp" type="tel" pattern="^\(?0?\d{2}\)?\s*\d{5}[-\s]?\d{4}$|^\(?0?\d{2}\)?\s*\d{4}[-\s]?\d{4}$" placeholder="(DDD) xxxx-xxxxx">
+							<span class="erro__alert">Esse campo não está válido.</span>
+						</div>
+						<div class="input__wrapper">
+							<label class="input__label label--box email" for="email">Email</label>
+							<input class="input__contato email" data-tipo="email" id="email" type="email" maxlength = "80" required placeholder="username@provedor.com">
+							<span class="erro__alert">Esse campo não está válido.</span>
+						</div>
 						<input class="input__contato input--enviar" type="submit" value="Enviar">
 					</form>
 				</div>
@@ -104,6 +120,7 @@
 					<p class="copyright"><i class="fa-regular fa-copyright"></i>All Rights Reserved 2022 - Raphael Nigri</p>
 				</div>
 		</footer>
-		<script src="assets/script/index.js"> </script>
+		<script src="assets/script/index.js"></script>
+		<script src="assets/script/validation.js"></script>
 	</body>
 </html>

@@ -1,0 +1,30 @@
+.erro .input__label::after{
+    content: "\f071";
+    color: darkorange;
+    font: var(--fa-font-solid);
+    margin-left: 16px;
+}
+
+.erro .input__contato{
+    border: 4px solid darkorange;
+}
+
+.erro__alert{
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: darkorange;
+    align-self: flex-start;
+    margin-top: -22px;
+    display: none;
+}
+
+.erro__alert::before{
+    content: "\f013";
+    color: darkorange;
+    font: var(--fa-font-solid);
+    margin-right: 10px;
+}
+
+.erro .erro__alert{
+    display: block;
+}
