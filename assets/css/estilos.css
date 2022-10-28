@@ -32,7 +32,7 @@ header {
   font-size: 2.2rem;
 }
 
-.link:before {
+.link::before {
   background-color: #d41017;
   content: "";
   height: 4px;
@@ -42,6 +42,7 @@ header {
   text-decoration: none;
 }
 
+.link--ativo::before ,
 .link:hover:before {
   width: 4rem;
   transition: .2s ease-out;
@@ -356,6 +357,7 @@ textarea{
 .input__radio{
   width: 0px;
   height: 0px;
+  opacity: 0;
 }
 
 .radiobox{
