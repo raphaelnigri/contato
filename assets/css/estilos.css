@@ -304,6 +304,11 @@ main{
   font-size: 1.8rem;
 }
 
+.label--title{
+  margin-top: 4px;
+  margin-bottom: -8px;
+}
+
 .label--box{
   background-color: white;
   margin: 0px 0px -32px 16px;
@@ -333,7 +338,8 @@ textarea{
   gap: 16px;
 }
 
-.label--title{
+.label--fieldset{
+  margin-top: 4px;
   grid-column: span 3;
 }
 
@@ -393,11 +399,6 @@ textarea{
 .input--enviar:focus , .input--enviar:hover{
   background-color: #888;
   transition: 0.3s ;
-}
-
-.tel{
-  width: 100%;
-  margin-left: -32px;
 }
 
 @media screen and (min-width: 1024px) {

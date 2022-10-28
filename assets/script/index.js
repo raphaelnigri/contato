@@ -1,63 +1,50 @@
 /*Radio input menu*/
-
-const mail = document.querySelectorAll('.email')
-const tel = document.querySelectorAll('.telefone')
-const whats = document.querySelectorAll('.whatsapp')
+const mail = document.getElementById('email')
+const tel = document.getElementById('telefone')
+const whats = document.getElementById('whatsapp')
 const input = document.querySelectorAll("input[type=radio]");
 
 function mailON (){
-	if (mail[0].classList.contains('off')) {
-		for(let i of mail) {  
-			i.classList.remove('off');
-		}
-		mail[1].required = true;
+	if (mail.parentNode.classList.contains('off')) {
+		mail.parentNode.classList.remove('off')
+		mail.required = true;
 	}
 }
 function mailOff(){
-	if (!mail[0].classList.contains('off')) {
-		for(let i of mail) {  
-			i.classList.add('off');
-		}
-		mail[1].required = false;
+	if (!mail.parentNode.classList.contains('off')) {
+		mail.parentNode.classList.add('off')
+		mail.required = false;
 	}
 }
 
 function telON (){
-	if (tel[0].classList.contains('off')) {
-		for(let i of tel) {  
-			i.classList.remove('off');
-		}
-		tel[1].required = true;
+	if (tel.parentNode.classList.contains('off')) {
+		tel.parentNode.classList.remove('off')
+		tel.required = true;
 	}
 }
 function telOff(){
-	if (!tel[0].classList.contains('off')) {
-		for(let i of tel) {  
-			i.classList.add('off');
-		}
-		tel[1].required = false;
+	if (!tel.parentNode.classList.contains('off')) {
+		tel.parentNode.classList.add('off')
+		tel.required = false;
 	}
 }
 
 function whatsON (){
-	if (whats[0].classList.contains('off')) {
-		for(let i of whats) {  
-			i.classList.remove('off');
-		}
-		whats[1].required = true;
+	if (whats.parentNode.classList.contains('off')) {
+		whats.parentNode.classList.remove('off')
+		whats.required = true;
 	}
 }
 function whatsOff(){
-	if (!whats[0].classList.contains('off')) {
-		for(let i of whats) {  
-			i.classList.add('off');
-		}
-		whats[1].required = false;
+	if (!whats.parentNode.classList.contains('off')) {
+		whats.parentNode.classList.add('off')
+		whats.required = false;
 	}
 }
 
-for (let i of input){
-	i.addEventListener('change', () => {
+for (let element of input){
+	element.addEventListener('change', () => {
 		if (input[0].checked){
 			mailON();
 			telOff();

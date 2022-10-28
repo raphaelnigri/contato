@@ -1,7 +1,8 @@
 const inputs = document.querySelectorAll('.input__contato')
 
 const validadores = {
-    cpf_cnpj:input => validaCPF_CNPJ(input)
+    cpf_cnpj:input => validaCPF_CNPJ(input),
+    cep:input => integraEValidaCEP(input)
 }
 
 const mensagensDeErro = {
@@ -18,6 +19,20 @@ const mensagensDeErro = {
     },
     site:{
         typeMismatch: 'Esse url não é válido. Tente colocar http: no início do campo.'
+    },
+    cep:{
+        valueMissing: 'Informe o seu CEP.',
+        patternMismatch: 'O CEP digitado não é válido.',
+        customError: 'Não foi possivel encontrar o CEP.'
+    },
+    estado:{
+        valueMissing: 'Informe o seu estado.',
+    },
+    cidade:{
+        valueMissing: 'Informe a sua cidade.',
+    },
+    logradouro:{
+        valueMissing: 'Informe o seu endereço.',
     },
     email:{
         valueMissing: 'O campo de email deve ser preenchido.',
@@ -74,6 +89,8 @@ inputs.forEach(input =>{
         valida(evento.target);
     })
 })
+
+/* Validações do CPF e CNPJ */
 
 function checaNumeroRepetido(numero){
     const valoresRepetidos = [
@@ -195,4 +212,45 @@ function checaEstruturaCNPJ(cnpj){
           return false;
            
     return true;
+}
+
+/* integração com a Api e Validações do CEP */
+
+function integraEValidaCEP(input){
+    const cep = input.value.replace(/\D/g, '');
+    const url = `https://viacep.com.br/ws/${cep}/json`
+    const options = {
+        method: 'GET',
+        mode: 'cors',
+        headers: {
+            'content-type': 'application/json;charset=utf-8'
+        }
+    }
+
+    if(!input.validity.patternMismatch && !input.validity.valueMissing){
+        fetch(url, options).then(
+            response => response.json()
+        ).then(
+            data => {
+                console.log(data)
+                if(data.erro){
+                    input.setCustomValidity('Não foi possivel encontrar o CEP.');
+                    return;
+                }
+                input.setCustomValidity('');
+                preencheCampos(data);
+                return;
+            }
+        )
+    }
+}
+
+function preencheCampos(data){
+    const logradouro = document.querySelector('[data-tipo="logradouro"]');
+    const cidade = document.querySelector('[data-tipo="cidade"]');
+    const estado = document.querySelector('[data-tipo="estado"]');
+
+    logradouro.value = data.logradouro;
+    cidade.value = data.localidade;
+    estado.value = data.uf;
 }
