@@ -466,12 +466,27 @@ footer {
   color: blueviolet;
 }
 
+.menu__footer__item--insta::after {
+  content: "\f16d";
+  font: var(--fa-font-brands);
+}
+
 .menu__footer__item--face:hover {
   color: dodgerblue;
 }
 
+.menu__footer__item--face::after {
+  content: "\f09a";
+  font: var(--fa-font-brands);
+}
+
 .menu__footer__item--twit:hover {
   color: skyblue;
+}
+
+.menu__footer__item--twit::after {
+  content: "\f099";
+  font: var(--fa-font-brands);
 }
 
 .menu__footer__circle{
@@ -504,8 +519,10 @@ footer {
   color: white;
 }
 
-.copyright i{
-  margin-right: 8px;
+.copyright::before{
+  content: "\f1f9";
+  font: var(--fa-font-regular);
+  margin-right: 6px;
 }
 
 .off{
