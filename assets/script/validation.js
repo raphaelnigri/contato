@@ -1,4 +1,4 @@
-const inputs = document.querySelectorAll('.input__contato')
+const inputs = document.querySelectorAll('.input__box')
 
 const validadores = {
     cpf_cnpj:input => validaCPF_CNPJ(input),

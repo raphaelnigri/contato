@@ -22,7 +22,7 @@
 	  				<span class="menu-icon__linhas"></span>
 	  			</label>
 		  		<ul class="menu">
-					<li><a href="#" class="menu__link link--ativo">Serviços</a></li>
+					<li><a href="#" class="menu__link menu__link--ativo">Serviços</a></li>
 					<li><a href="#" class="menu__link">Sobre Nós</a></li>
 					<li><a href="#" class="menu__link">Carreiras</a></li>
 					<li><a href="#" class="menu__link">Inovação</a></li>
@@ -34,7 +34,7 @@
 				<h1 class="title">Transformando ideias em códigos.</h1>
 				<span class="title-complement">E códigos em soluções!</span>
 				<article class="fazemos__container">
-					<div class="imagem" alt="Desenvolvedores que estão felizes em receber o cliente no seu escritório para conversar sobre o projeto."></div>
+					<div class="fazemos__imagem" alt="Desenvolvedores que estão felizes em receber o cliente no seu escritório para conversar sobre o projeto."></div>
 					<div class="fazemos__background">
 						<h2 class="title__fazemos">O que fazemos?</h2>
 						<p class="subtitle__fazemos subtitle--web">Web Design</p>
@@ -53,45 +53,45 @@
 					<form class="form__container">
 						<div class="input__wrapper">
 							<label class="input__label label--box" for="mensagem">Mensagem</label>
-							<textarea class="input__contato" data-tipo="mensagem" rows="12" id="mensagem" maxlength = "800" placeholder="Insira sua mensagem..." required></textarea>
+							<textarea class="input__box" data-tipo="mensagem" rows="12" id="mensagem" maxlength = "800" placeholder="Insira sua mensagem..." required></textarea>
 							<span class="erro__alert">Esse campo não está válido.</span>
 						</div>
 						<h3 class="input__label label--title">Informações pessoais:</h3>
 						<div class="input__wrapper">
 							<label class="input__label label--box" for="nome">Nome</label>
-							<input class="input__contato" data-tipo="nome" id="nome" type="text" placeholder="Insira seu nome..." required>
+							<input class="input__box" data-tipo="nome" id="nome" type="text" placeholder="Insira seu nome..." required>
 							<span class="erro__alert">Esse campo não está válido.</span>
 						</div>
 						<div class="input__wrapper">
 							<label class="input__label label--box" for="cpf_cnpj">CPF / CNPJ</label>
-							<input class="input__contato" data-tipo="cpf_cnpj" id="cpf_cnpj" type="text" pattern="^(\d{2}\.?\d{3}\.?\d{3}\/?\d{4}-?\d{2}|\d{3}\.?\d{3}\.?\d{3}[-.]?\d{2})$"  placeholder="Insira seu CPF ou CNPJ..." required>
+							<input class="input__box" data-tipo="cpf_cnpj" id="cpf_cnpj" type="text" pattern="^(\d{2}\.?\d{3}\.?\d{3}\/?\d{4}-?\d{2}|\d{3}\.?\d{3}\.?\d{3}[-.]?\d{2})$"  placeholder="Insira seu CPF ou CNPJ..." required>
 							<span class="erro__alert">Esse campo não está válido.</span>
 						</div>
 						<div class="input__wrapper">
 							<label class="input__label label--box" for="site">Website (Opcional)</label>
-							<input class="input__contato" data-tipo="site" id="site" type="url" placeholder="O que já é bom ainda pode melhorar...">
+							<input class="input__box" data-tipo="site" id="site" type="url" placeholder="O que já é bom ainda pode melhorar...">
 							<span class="erro__alert">Esse campo não está válido.</span>
 						</div>
 
 						<h3 class="input__label label--title">Endereço:</h3>
 						<div class="input__wrapper">
 							<label class="input__label label--box" for="cep">Cep</label>
-							<input class="input__contato" data-tipo="cep" id="cep" pattern="^\d{5}-?\d{3}$" type="text" required placeholder="Insira seu cep...">
+							<input class="input__box" data-tipo="cep" id="cep" pattern="^\d{5}-?\d{3}$" type="text" required placeholder="Insira seu cep...">
 							<span class="erro__alert">Esse campo não está válido.</span>
 						</div>
 						<div class="input__wrapper">
 							<label class="input__label label--box" for="estado">Estado</label>
-							<input class="input__contato" data-tipo="estado" id="estado" type="text" required placeholder="insira seu estado...">
+							<input class="input__box" data-tipo="estado" id="estado" type="text" required placeholder="insira seu estado...">
 							<span class="erro__alert">Esse campo não está válido.</span>
 						</div>
 						<div class="input__wrapper">
 							<label class="input__label label--box" for="cidade">Cidade</label>
-							<input class="input__contato" data-tipo="cidade" id="cidade" type="text" required placeholder="Insira sua cidade...">
+							<input class="input__box" data-tipo="cidade" id="cidade" type="text" required placeholder="Insira sua cidade...">
 							<span class="erro__alert">Esse campo não está válido.</span>
 						</div>
 						<div class="input__wrapper">
 							<label class="input__label label--box" for="logradouro">Logradouro</label>
-							<input class="input__contato" data-tipo="logradouro" id="logradouro" type="text" required placeholder="Insira seu logradouro...">
+							<input class="input__box" data-tipo="logradouro" id="logradouro" type="text" required placeholder="Insira seu logradouro...">
 							<span class="erro__alert">Esse campo não está válido.</span>
 						</div>
 
@@ -110,24 +110,24 @@
 								<span class="radiobox"></span>
 							</label>
 						</fieldset>
-						
+
 						<div class="input__wrapper off">
 							<label class="input__label label--box" for="telefone">Telefone ou Celular</label>
-							<input class="input__contato telefone" data-tipo="telefone" id="telefone" type="tel" pattern="^\(?0?\d{2}\)?\s*\d{5}[-\s]?\d{4}$|^\(?0?\d{2}\)?\s*\d{4}[-\s]?\d{4}$" placeholder="(DDD) xxxx-xxxx">
+							<input class="input__box" data-tipo="telefone" id="telefone" type="tel" pattern="^\(?0?\d{2}\)?\s*\d{5}[-\s]?\d{4}$|^\(?0?\d{2}\)?\s*\d{4}[-\s]?\d{4}$" placeholder="(DDD) xxxx-xxxx">
 							<span class="erro__alert">Esse campo não está válido.</span>
 						</div>
 						<div class="input__wrapper off">
 							<label class="input__label label--box" for="whatsapp">Whatsapp</label>
-							<input class="input__contato" data-tipo="whatsapp" id="whatsapp" type="tel" pattern="^\(?0?\d{2}\)?\s*\d{5}[-\s]?\d{4}$|^\(?0?\d{2}\)?\s*\d{4}[-\s]?\d{4}$" placeholder="(DDD) xxxx-xxxxx">
+							<input class="input__box" data-tipo="whatsapp" id="whatsapp" type="tel" pattern="^\(?0?\d{2}\)?\s*\d{5}[-\s]?\d{4}$|^\(?0?\d{2}\)?\s*\d{4}[-\s]?\d{4}$" placeholder="(DDD) xxxx-xxxxx">
 							<span class="erro__alert">Esse campo não está válido.</span>
 						</div>
 						<div class="input__wrapper">
 							<label class="input__label label--box" for="email">Email</label>
-							<input class="input__contato" data-tipo="email" id="email" type="email" required placeholder="username@provedor.com">
+							<input class="input__box" data-tipo="email" id="email" type="email" required placeholder="username@provedor.com">
 							<span class="erro__alert">Esse campo não está válido.</span>
 						</div>
 
-						<input class="input__contato input--enviar" type="submit" value="Enviar">
+						<input class="input__box input--enviar" type="submit" value="Enviar">
 					</form>
 				</div>
 			</section>
