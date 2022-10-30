@@ -56,18 +56,18 @@ header {
   user-select: none;
 }
 
-.menu-icon .navicon {
-  background: #333;
+.menu-icon .menu-icon__linhas {
+  background: #d41017;
   display: block;
   height: 0.5rem;
   position: relative;
-  transition: background .2s ease-out;
+  transition: .2s ease-out;
   width: 3.5em;
   border-radius: 20px;
 }
 
-.menu-icon .navicon:before,
-.menu-icon .navicon:after {
+.menu-icon .menu-icon__linhas:before,
+.menu-icon .menu-icon__linhas:after {
   background: #333;
   content: '';
   display: block;
@@ -78,11 +78,11 @@ header {
   border-radius: 20px;
 }
 
-.menu-icon .navicon:before {
+.menu-icon .menu-icon__linhas:before {
   top: 15px;
 }
 
-.menu-icon .navicon:after {
+.menu-icon .menu-icon__linhas:after {
   top: -15px;
 }
 
@@ -95,20 +95,20 @@ header {
   transition: .3s ease-in-out;
 }
 
-.menu-btn:checked ~ .menu-icon .navicon {
+.menu-btn:checked ~ .menu-icon .menu-icon__linhas {
   background: transparent;
 }
 
-.menu-btn:checked ~ .menu-icon .navicon:before {
+.menu-btn:checked ~ .menu-icon .menu-icon__linhas:before {
   transform: rotate(-45deg);
 }
 
-.menu-btn:checked ~ .menu-icon .navicon:after {
+.menu-btn:checked ~ .menu-icon .menu-icon__linhas:after {
   transform: rotate(45deg);
 }
 
-.menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
-.menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+.menu-btn:checked ~ .menu-icon:not(.steps) .menu-icon__linhas:before,
+.menu-btn:checked ~ .menu-icon:not(.steps) .menu-icon__linhas:after {
   top: 0;
 }
 
