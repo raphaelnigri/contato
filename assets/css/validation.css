@@ -31,7 +31,7 @@
 
 .valid .input__label::after{
     content: "\f058";
-    color: lightskyblue;
+    color: var(--valid);
     font: var(--fa-font-solid);
     margin-left: 16px;
 }
