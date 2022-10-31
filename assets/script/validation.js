@@ -73,10 +73,20 @@ function valida(input){
     }
 
     if(input.validity.valid){
-        input.parentElement.classList.remove('erro');
+        if (!input.parentElement.classList.contains('valid') && input.required==true){
+            input.parentElement.classList.add('valid');
+        }
+        if (input.parentElement.classList.contains('erro')){
+            input.parentElement.classList.remove('erro');
+        }
         input.parentElement.querySelector('.erro__alert').innerHTML = '';
     } else {
-        input.parentElement.classList.add('erro');
+        if (input.parentElement.classList.contains('valid')){
+            input.parentElement.classList.remove('valid');
+        }
+        if (!input.parentElement.classList.contains('erro')){
+            input.parentElement.classList.add('erro');
+        }
         input.parentElement.querySelector('.erro__alert').innerHTML = mostraAlerta(inputType , input);
     }
 }
