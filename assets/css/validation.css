@@ -2,7 +2,7 @@
     content: "\f071";
     color: var(--erro);
     font: var(--fa-font-solid);
-    margin-left: 16px;
+    margin-left: 10px;
 }
 
 .erro .input__box{
@@ -10,11 +10,11 @@
 }
 
 .erro__alert{
-    font-size: 1.25rem;
+    font-size: 1.2rem;
     font-weight: 700;
     color: var(--erro);
     align-self: flex-start;
-    margin-top: -22px;
+    margin-top: -20px;
     display: none;
 }
 
@@ -33,5 +33,5 @@
     content: "\f058";
     color: var(--valid);
     font: var(--fa-font-solid);
-    margin-left: 16px;
+    margin-left: 10px;
 }
