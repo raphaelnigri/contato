@@ -1,7 +1,24 @@
 :root {
+    --background: #fefefe;
 	--header: whitesmoke;
-    
+    --menu__botao__linha: black;
+    --subtitle: #888;
+    --cartao: whitesmoke;
+
+    --label: purple; /* --label: #d41017;*/
+    --input__border: #888;
+    --radiobox__label: #666;
+    --radiobox__uncheck: #ccc;
+    --radiobox__check: #aaa;
+
+    --footer: whitesmoke;
+    --footer__contrast: #888;
+    --footer__circle: black;
+
+    --Icon__face: ;
+    --icon__twiter: ;
+    --icon__insta: ;
+
     --erro: darkorange;
     --valid: lightskyblue;
-
 }

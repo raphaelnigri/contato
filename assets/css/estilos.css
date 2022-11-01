@@ -8,17 +8,33 @@ body {
     "header"
     "main"
     "footer";
-  width: 100vw;
+  width: 100%;
   overflow-x: hidden;
+  background-color: var(--background);
 }
-
-
 
 header {
   background-color: var(--header);
   box-shadow: 2px 2px 4px 0 rgba(0,0,0,.1);
   grid-area: header;
-  width: 100vw;
+  width: 100%;
+}
+
+.logo{
+  color: var(--label);
+  font-family: 'Oleo Script', cursive;
+  font-size: 1.6rem;
+  float: left;
+  position: absolute;
+    left: 5vw;
+    top: 15px;
+  pointer-events: none;
+}
+
+.logo::before{
+  content: '\e473';
+  font: var(--fa-font-solid);
+  margin-right: 10px
 }
 
 .menu {
@@ -34,14 +50,14 @@ header {
   text-decoration: none;
   position: relative;
   align-items: center;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
 }
 
 .menu__link::before {
-  background-color: #d41017;
+  background-color: var(--label);
   content: "";
   height: 4px;
-  width: 2rem;
+  width: 1.8rem;
   margin-right: 10px;
   transition: .2s ease-out;
   text-decoration: none;
@@ -49,20 +65,19 @@ header {
 
 .menu__link--ativo::before ,
 .menu__link:hover:before {
-  width: 4rem;
+  width: 2.8rem;
   transition: .2s ease-out;
 }
 
 .menu-icon {
   cursor: pointer;
   float: right;
-  padding: 24px 5vw;
+  padding: 25px 5vw;
   position: relative;
-  user-select: none;
 }
 
 .menu-icon .menu-icon__linhas {
-  background: #d41017;
+  background: var(--label);
   display: block;
   height: 0.3rem;
   position: relative;
@@ -73,7 +88,7 @@ header {
 
 .menu-icon .menu-icon__linhas:before,
 .menu-icon .menu-icon__linhas:after {
-  background: #333;
+  background: var(--menu__botao__linha);
   content: '';
   display: block;
   height: 100%;
@@ -127,12 +142,12 @@ header {
   }
 
   .menu__link {
-    border-right: 4px solid #d41017;
+    border-right: 4px solid var(--label);
   }
 
   .menu__link:hover , .menu__link:focus{
     color: var(--header);
-    background-color: #d41017;
+    background-color: var(--label);
     opacity: 0.5;
     outline: none;
     transition: 0.25s ease;
@@ -167,18 +182,18 @@ main{
 .title-complement {
   font-family: 'Playfair Display', serif;
   font-size: 1.8rem;
-  color: #888;
+  color: var(--subtitle);
   text-align: center;
   display: flex;
   flex-direction: column;
-  padding-inline: 10px;
+  padding-inline: 20px;
 }
 
 .title-complement:before {
-  background-color: #d41017;
+  background-color: var(--label);
   content: "";
   height: 4px;
-  width: 80px;
+  width: 4rem;
   margin: 32px auto 16px auto;
 }
 
@@ -190,15 +205,27 @@ main{
 
 .fazemos__imagem {
   width: 100%;
-  height: 440px;
+  height: 340px;
   background: url(../img/contact_2.png) no-repeat;
   background-size: cover;
   background-position: center;
 }
 
+@media screen and (min-width: 640px) {
+  .fazemos__imagem {
+    height: 480px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .fazemos__imagem {
+    height: 600px;
+  }
+}
+
 .fazemos__background{
   width: 100%;
-  background-color: whitesmoke;
+  background-color: var(--header);
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-areas: 
@@ -207,9 +234,8 @@ main{
     "p1 p2"
     "desenvolvimento desenvolvimento"
     "p3 p3";
-  align-items: top;
   column-gap: 4vw;
-  padding: 0px 8px 32px 8px;
+  padding:0px 10px 32px 10px;
 }
 
 .title__fazemos{
@@ -248,13 +274,13 @@ main{
   .fazemos__background{
     width: 100%;
     height: 540px;
-    background-color: whitesmoke;
+    background-color: var(--header);
     grid-area: contato;
   }
 }
 
 .subtitle__fazemos:before {
-  background-color: #d41017;
+  background-color: var(--label);
   content: "";
   height: 4px;
   width: 3rem;
@@ -310,7 +336,7 @@ main{
 
 .input__label{
   align-self: flex-start;
-  color: #d41017;
+  color: var(--label);
   font-family: 'Playfair Display', serif;
   font-weight: 700;
   font-size: 1.2rem;
@@ -322,7 +348,7 @@ main{
 }
 
 .label--box{
-  background-color: white;
+  background-color: var(--background);
   margin: 0px 0px -32px 16px;
   padding: 0px 0.5em 0px 0.5em;
   z-index: 4;
@@ -330,16 +356,17 @@ main{
 
 .input__box{
   border-radius: 10px;
-  border: 2px solid #888;
+  border: 2px solid var(--input__border);
   padding: 0.8em;
   width: 100%;
   outline: none;
   font-size: 1.1rem;
-  background-color: white;
+  background-color: var(--background);
 }
 
 textarea{
-  resize: none;
+	min-height: 8em;
+	max-height: 60vh;
 }
 
 .fieldset__contato{
@@ -357,7 +384,7 @@ textarea{
 }
 
 .label--radio{
-  color: #666;
+  color: var(--radiobox__label);
   font-size: 1rem;
   cursor: pointer;
   justify-self: center;
@@ -366,7 +393,7 @@ textarea{
   align-items: center;
 }
 
-/*hide input radiobox*/
+/*hide real radiobox*/
 .input__radio{
   width: 0px;
   height: 0px;
@@ -377,38 +404,39 @@ textarea{
   height: 1em;
   width: 1em;
   border-radius: 0.3em;
-  background-color: #ccc;
+  background-color: var(--radiobox__uncheck);
   transition: 0.2s;
   margin-right: -5px;
 }
 
 .label--radio:hover input ~ .radiobox {
-  background-color: #666;
+  background-color: var(--radiobox__check);
 }
 
 .label--radio input:checked ~ .radiobox {
-  background-color: #666;
+  background-color: var(--radiobox__check);
 }
 
 .label--radio input:checked ~ .radiobox:after {
   content: "\f00c";
   font: var(--fa-font-solid);
-  color: #d41017;
+  color: var(--label);
 }
 
 .input--enviar{
+  color: var(--label);
   width: auto;
   padding: 0.5em 1.5em;
   cursor: pointer;
   font-weight: 700;
   font-family: 'Poppins', sans-serif;
   text-transform: uppercase;
-  background-color: whitesmoke;
-  box-shadow: 0px 0px 3px 2px rgba(0,0,0,0.3);
+  background-color: var(--cartao);
+  box-shadow: inset 0px 0px 3px 2px rgba(0,0,0,0.3);
 }
 
 .input--enviar:focus , .input--enviar:hover{
-  background-color: #888;
+  transform: translateY(0.15em);
   transition: 0.3s ;
 }
 
@@ -417,12 +445,12 @@ textarea{
   .section__mensagem{
     background: url(../img/contact.png) no-repeat;
     background-size: 125% 100%;
-    width: 100vw;
+    width: 100%;
     box-shadow: inset 0px 8px 4px -4px rgba(0,0,0,0.3) , inset 0px -8px 4px -4px rgba(0,0,0,0.3);
   }
 
   .cartao{
-    background-color: whitesmoke;
+    background-color: var(--cartao);
     opacity: 0.95;
     width: 70%;
     border-radius: 50px;
@@ -432,12 +460,12 @@ textarea{
   }
 
   .input__box{
-    background-color: whitesmoke;
+    background-color: var(--cartao);
     opacity: 0.95;
   }
 
   .label--box{
-    background-color: whitesmoke;
+    background-color: var(--cartao);
   }
 
   .input__label{
@@ -455,7 +483,7 @@ textarea{
 
 footer {
   grid-area: footer;
-  background-color: whitesmoke;
+  background-color: var(--footer);
   box-shadow: 0px 0px 4px 2px rgba(0,0,0,0.3);
 }
 
@@ -463,14 +491,14 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 280px;
+  width: 270px;
   margin: 16px auto 0px auto;
 }
 
 .menu__footer__item {
   border-radius: 50%;
   cursor: pointer;
-  color: whitesmoke;
+  color: var(--footer);
   font-size: 1.7rem;
   padding: 0.5em;
 }
@@ -503,7 +531,7 @@ footer {
 }
 
 .menu__footer__circle{
-  background-color: #888;
+  background-color:var(--footer__contrast);
   border-radius: 50%;
   width: 46px;
   height: 46px;
@@ -514,13 +542,13 @@ footer {
 }
 
 .menu__footer__circle:hover{
-  background-color: black;
+  background-color: var(--footer__circle);
   transition: 0.5s;
 }
 
 .copyright__container{
   margin-top: 16px;
-  background-color: #888;
+  background-color:var(--footer__contrast);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -530,7 +558,7 @@ footer {
 
 .copyright{
   font-size: 0.9rem;
-  color: white;
+  color: var(--background);
 }
 
 .copyright::before{

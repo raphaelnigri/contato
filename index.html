@@ -11,16 +11,17 @@
 		<script src="https://kit.fontawesome.com/e85ea023b4.js" crossorigin="anonymous"></script>
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Oleo+Script&family=Playfair+Display&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 		<title>Página de Contatos - Portfolio - Raphael Nigri</title>
 		<meta name="Raphael Nigri" content="Exemplo de formulário">
 		<meta name="Portfólio" content="html, javascript, css">
 	</head>
 	<body>
 		<header>
+			<div class="logo">Sua empresa</div>
 			<nav>
 	  			<input class="menu-btn" type="checkbox" id="menu-btn"/>
-	  			<label class="menu-icon" for="menu-btn">
+	  			<label class="menu-icon" for="menu-btn" title="Abrir menu de navegação" role="button" tabindex="0">
 	  				<span class="menu-icon__linhas"></span>
 	  			</label>
 		  		<ul class="menu">
@@ -55,7 +56,7 @@
 					<form class="form__container">
 						<div class="input__wrapper">
 							<label class="input__label label--box" for="mensagem">Mensagem</label>
-							<textarea class="input__box" data-tipo="mensagem" rows="8" id="mensagem" maxlength = "800" placeholder="Insira sua mensagem..." required></textarea>
+							<textarea class="input__box" data-tipo="mensagem" id="mensagem" maxlength = "800" placeholder="Insira sua mensagem..." required></textarea>
 							<span class="erro__alert">Esse campo não está válido.</span>
 						</div>
 						<h3 class="input__label label--title">Informações pessoais:</h3>
@@ -146,5 +147,6 @@
 		</footer>
 		<script src="assets/script/index.js"></script>
 		<script src="assets/script/validation.js"></script>
+		<script src="assets/script/textarea.js"></script>
 	</body>
 </html>

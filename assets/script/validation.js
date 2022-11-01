@@ -95,13 +95,12 @@ inputs.forEach(input =>{
     input.addEventListener('blur', (evento) =>{
         valida(evento.target);
     })
-    input.addEventListener('keyup', (evento) =>{
+    input.addEventListener('input', (evento) =>{
         valida(evento.target);
     })
 })
 
 /* Validações do CPF e CNPJ */
-
 function checaNumeroRepetido(numero){
     const valoresRepetidos = [
         '00000000000',
@@ -225,7 +224,6 @@ function checaEstruturaCNPJ(cnpj){
 }
 
 /* integração com a Api e Validações do CEP */
-
 function integraEValidaCEP(input){
     const cep = input.value.replace(/\D/g, '');
     const url = `https://viacep.com.br/ws/${cep}/json`
